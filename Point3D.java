@@ -29,3 +29,38 @@ Some of the existing behaviors from Point should behave differently on Point3D o
 Write your class below:
 
 */
+
+public class Point3D extends Point{
+  protected int z=0; // its own variable 
+
+  public Point3D(){
+    x=0;
+    y=0;
+    z=0;
+  }
+  public Point3D(int x,int y,int z){
+    setPoint(x, y);
+    this.z=z;
+  }
+
+  public void setLocation(int x,int y, int z){
+    setPoint(x, y);
+    this.z=z;
+
+  }
+  public int getz(){
+    return this.z;
+  }
+
+  public String toString (){ //overwriting
+    String x ="("+getX()+","+gety()+","+z+")";
+    return x;
+
+  }
+  public double distancetoOrigin(){
+    int answer=0;
+    answer=sqrt((getx())^2+(gety())^2+(getz())^2); 
+
+  }
+
+}
